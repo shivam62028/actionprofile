@@ -5,16 +5,15 @@ on:
       - main
 
 jobs:
-  Build 
+  Build:
     runs-on: ubuntu-latest
     steps:
       - name: Code checkout
         uses: actions/checkout@v4
 
-        - name:Maven build
-          run: mvn install
+      - name: Maven build
+        run: mvn install
 
-          
   Testing:
     runs-on: ubuntu-latest
     needs: Build
